@@ -1,0 +1,4 @@
+chesseditor
+===========
+
+Chess Diagram Editor
