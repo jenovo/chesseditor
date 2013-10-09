@@ -22,12 +22,13 @@ public final class Figures {
 	public static final int BISHOP_B = 9;
 	public static final int KNIGHT_B = 10;
 	public static final int PAWN_B = 11;
+	public static final int BLIND_FIELD = 12;
 
 	public static String[] figures = initializeFigures();
 
 	private static String[] initializeFigures()
 	{
-		String[] figures = new String[12];
+		String[] figures = new String[13];
 
 		figures[KING_W] = "Chess_klt60.png";
 		figures[QUEEN_W] = "Chess_qlt60.png";
@@ -41,6 +42,7 @@ public final class Figures {
 		figures[BISHOP_B] = "Chess_bdt60.png";
 		figures[KNIGHT_B] = "Chess_ndt60.png";
 		figures[PAWN_B] = "Chess_pdt60.png";
+		figures[BLIND_FIELD] = "blindfield.png";
 
 		return figures;
 	}

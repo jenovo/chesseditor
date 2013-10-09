@@ -21,8 +21,12 @@ public class Chessboard extends JComponent
 	{
 		//URL url = ChessDiagramEditor.class.getResource("/ChessDiagramEditor/xresources/chessboard.png");
 		//backgroundImage = ImageIO.read(url);
-		backgroundImage = ImageIO.read(new File("/home/jtc/Stažené/Chess/chessboard.png"));
-		setPreferredSize(new Dimension(458,468));
+		
+		backgroundImage = ImageIO.read(getClass().getResource("resources/chessboard.png"));
+		
+		//backgroundImage = ImageIO.read(new File("/home/jtc/Stažené/Chess/chessboard.png"));
+
+		setPreferredSize(new Dimension(520,520));
 	}
 
 	@Override
@@ -37,20 +41,14 @@ public class Chessboard extends JComponent
 			for (int x = 1; x <= 8; x++) {
 
 				try {
-					
 					ChessboardItem item = board.getItem(x,y,0);
 
-					int locx = (x-1)*48+33;
-					int locy = (y-1)*48+38;
+					int locx = (x-1)*60+37;
+					int locy = (y-1)*60+3;
 
 					if (item != null) {
-						/*graphics.setColor(Color.blue);
-						graphics.fillOval(locx+24, locy+24, 6, 6);*/
-
 						try {
-
-							System.out.println("v:"+item.variant);
-							Image figure = ImageIO.read(new File("/home/jtc/Stažené/Chess/figures/"+Figures.figures[item.variant]));
+							Image figure = ImageIO.read(getClass().getResource("resources/"+Figures.figures[item.variant]));
 							graphics.drawImage(figure,locx,locy, this);
 						} catch(IOException exc) {}
 					}
@@ -63,9 +61,9 @@ public class Chessboard extends JComponent
 
 	public static Point getBoardField(Point point) throws NoPointException
 	{
-		int boardTopLeftX = 36;
-		int boardTopLeftY = 41;
-		int gridSize = 48;
+		int boardTopLeftX = 37;
+		int boardTopLeftY = 3;
+		int gridSize = 60;
 
 		if (point.x < boardTopLeftX || point.y < boardTopLeftY) {
 			throw new NoPointException("No point.");

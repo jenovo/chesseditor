@@ -32,7 +32,7 @@ public class ChessDiagramEditor {
 	{
 		JFrame frame = new JFrame("Chessboard Diagram Editor");
 		frame.setLayout(new FlowLayout());
-		frame.setSize(710, 500);
+		frame.setSize(750, 560);
 		//frame.setLocationRelativeTo(null);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
@@ -40,11 +40,11 @@ public class ChessDiagramEditor {
 
 			DefaultListModel figuresListModel = new DefaultListModel();
 
-			for (int i = 0; i < 12; i++)
+			for (int i = 0; i < 13; i++)
 			{
 				//System.out.println(Figures.figures);
 
-				ImageIcon figure = new ImageIcon(ImageIO.read(new File("/home/jtc/Stažené/Chess/figures/"+Figures.figures[i])));
+				ImageIcon figure = new ImageIcon(ImageIO.read(getClass().getResource("resources/"+Figures.figures[i])));
 				figuresListModel.add(i, figure);
 			}
 
