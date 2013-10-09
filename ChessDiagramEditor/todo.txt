@@ -1,0 +1,15 @@
+Key Features:
+-------------
+
+- multiple figures - DONE by design
+- highlighted fields
+- arrows
+- save as xml
+- copy to clipboard
+- export as png, jpeg
+
+
+Nice to have:
+-------------
+- drag and drop figures
+- zoom
